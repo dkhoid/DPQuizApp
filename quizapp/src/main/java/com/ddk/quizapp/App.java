@@ -1,4 +1,4 @@
-package com.ddk.mavenproject3;
+package com.ddk.quizapp;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

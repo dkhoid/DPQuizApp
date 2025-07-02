@@ -1,0 +1,22 @@
+
+.button{
+   -fx-font-weight: normal;
+   -fx-color:white;
+   -fx-font-size: 20;
+   -fx-text-fill: white;
+   -fx-pref-width: 200px;
+   -fx-background-color: #007bff;
+}
+.Sbj{
+    -fx-font-weight: normal;
+    -fx-text-align: center;
+    -fx-font-size: 40px;
+    -fx-stroke: gold;
+    -fx-stroke-width: 1;
+}
+.Menu{
+    -fx-alignment: CENTER;
+    -fx-spacing: 10;
+    -fx-background-color: lightblue;
+    -fx-padding: 10;
+}
