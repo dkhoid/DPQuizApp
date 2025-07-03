@@ -1,39 +1,47 @@
 package com.ddk.quizapp;
 
-import com.ddk.utils.myalert;
-
+import com.ddk.themes.Themes;
+import com.ddk.utils.MyStage;
+import com.ddk.utils.Myalert;
 import java.io.IOException;
-
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.ComboBox;
 
-public class PrimaryController {
+public class PrimaryController implements Initializable{
+    @FXML ComboBox<Themes> cbThemes;
+    
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        this.cbThemes.setItems(FXCollections.observableArrayList(Themes.values()));
+    }
+    public void HandleChangeThemes(ActionEvent event){
+        this.cbThemes.getSelectionModel().getSelectedItem().updateTheme(this.cbThemes.getScene());
+    }
     public void HandleQuestionManagement() throws IOException {
-        Scene scene = new Scene(new FXMLLoader(App.class.getResource("questions.fxml")).load());
-        Stage stage = new Stage();
-        stage.setScene(scene);
-        stage.setTitle("quizapp");
-        stage.show();
+        MyStage.getInstance().showStage("questions.fxml");
     }
 
     public void HandleNewPlay(ActionEvent event) {
-        myalert.getInstance().showMsg("Coming soon");
+        Myalert.getInstance().showMsg("Coming soon");
     }
 
     public void HandleSignin(ActionEvent event) {
-        myalert.getInstance().showMsg("Coming soon");
+        Myalert.getInstance().showMsg("Coming soon");
 
     }
 
     public void HandleSignup(ActionEvent event) {
-        myalert.getInstance().showMsg("Coming soon");
+        Myalert.getInstance().showMsg("Coming soon");
 
     }
 
     public void HandleNewPractice(ActionEvent event) {
-        myalert.getInstance().showMsg("Coming soon");
+        Myalert.getInstance().showMsg("Coming soon");
 
     }
 }

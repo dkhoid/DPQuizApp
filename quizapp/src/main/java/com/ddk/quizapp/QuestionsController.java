@@ -10,6 +10,10 @@ import javafx.scene.control.ComboBox;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.HBox;
 
 public class QuestionsController implements Initializable {
     @FXML
@@ -22,5 +26,13 @@ public class QuestionsController implements Initializable {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    public void addChoice(ActionEvent event){
+        HBox h = new HBox();
+        h.getStyleClass().add("Main");
+        
+        RadioButton rdo = new RadioButton();
+        TextField txt = new TextField();
+        
     }
 }

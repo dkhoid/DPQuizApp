@@ -6,7 +6,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@AllArgsConstructor
+//@AllArgsConstructor
 public class Category {
     private int id;
     private String name;
@@ -15,4 +15,9 @@ public class Category {
     public String toString() {
         return this.name;
     }
+    public Category(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+  
 }

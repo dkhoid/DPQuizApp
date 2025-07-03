@@ -4,18 +4,18 @@ package com.ddk.utils;
 import javafx.scene.control.Alert;
 
 
-public class myalert {
-    private static myalert instance;
+public class Myalert {
+    private static Myalert instance;
     private final Alert alert;
 
-    private myalert() {
+    private Myalert() {
         this.alert = new Alert(Alert.AlertType.INFORMATION);
         this.alert.setHeaderText("quizapp");
     }
 
-    public static myalert getInstance() {
+    public static Myalert getInstance() {
         if (instance == null) {
-            instance = new myalert();
+            instance = new Myalert();
         }
         return instance;
     }
